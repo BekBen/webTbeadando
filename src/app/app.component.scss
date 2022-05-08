@@ -1,0 +1,23 @@
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, a:active {
+    color: lightgray;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 14px 50px 16px 20px;;
+}
+
+mat-sidenav {
+    width: 250px;
+}

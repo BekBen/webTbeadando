@@ -1,0 +1,48 @@
+<div class="book">
+
+    <mat-form-field appearance="fill">
+        <mat-select [(ngModel)]="nev" >
+            
+            <mat-option value="1">Gyuró Evelin </mat-option>
+            <mat-option value="2">Gyuró Tamara</mat-option>
+            <mat-option value="3">Nagyonjó Éva</mat-option>
+            <mat-option value="4">Kemény Viki</mat-option>
+            <mat-option value="5">Kiss-Nagy Bea</mat-option>
+        </mat-select>
+
+
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-select [(ngModel)]="ms">
+            <mat-option *ngIf ="(nev) == 1 || (nev) == 4 ||(nev) == 5"value="sved">Svéd</mat-option>
+            <mat-option *ngIf ="(nev) == 1 || (nev) == 3 ||(nev) == 4 || (nev) == 5"value="gyogy">Gyógy</mat-option>
+            <mat-option *ngIf ="(nev) == 1 || (nev) == 5 "value="csipo-hat">Csípő-hát</mat-option>
+            <mat-option *ngIf ="(nev) == 1 || (nev) == 2 ||(nev) == 4 ||(nev) == 5"value="vall">Váll</mat-option>
+            <mat-option *ngIf ="(nev) == 2 || (nev) == 4"value="nyak">Nyak</mat-option>
+            <mat-option *ngIf ="(nev) == 1 || (nev) == 3 ||(nev) == 5"value="talp">Talp</mat-option>
+            <mat-option *ngIf ="(nev) == 3"value="frissito">Frissítő</mat-option>
+            <mat-option *ngIf ="(nev) == 2"value="arc">Arc</mat-option> 
+        </mat-select>
+    </mat-form-field>
+    <br>
+
+
+    
+
+    <mat-form-field>
+        <mat-label>Mikor szeretnél?</mat-label>
+        <input matInput [matDatepicker]="picker2">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+        </mat-form-field>
+    
+<br>
+        <span class="buttons">
+            <button mat-raised-button color="primary" type="submit" (click)="send()">Foglalás</button>
+        </span>
+
+</div>
+
+

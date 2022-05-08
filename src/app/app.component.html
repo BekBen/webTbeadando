@@ -1,0 +1,30 @@
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <app-menu (onCloseSidenav)="bezar($event, sidenav)" [loggedInUser]="loggedInUser" (onLogout)="logout($event)"  ></app-menu>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button mat-icon-button (click)="menuu(sidenav)">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div>{{'MASSZÁZS' | salyatpipe }}</div>
+        <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+            <ul fxLayout fxLayoutGap="25px" class="nav">
+
+              <li><a routerLink="main">Főoldal</a></li>
+              <li><a routerLink="aboutus">Rólunk</a></li>
+              <li><a routerLink="services">Szolgáltatások</a></li>
+              <li><a routerLink="worker">Masszőreink</a></li>
+              <li><a routerLink="prices">Áraink</a></li>
+              <li ><a routerLink="book">Foglalás</a></li>
+              <li *ngIf="!(loggedInUser)"><a routerLink="signup">Regisztráció</a></li>
+        
+              <li *ngIf="!(loggedInUser)"><a routerLink="/login">Belépés</a></li>
+              <li *ngIf="loggedInUser"><a routerLink="/login" (click)="logout()">Kilépés</a></li>
+            </ul>
+          </div>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "masszazs-2022": {
+      "hosting": {
+        "beadando": [
+          "masszazs-2022"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "masszazs-2022"
+  }
+}

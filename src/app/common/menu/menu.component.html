@@ -1,0 +1,53 @@
+ <mat-nav-list>
+  <a mat-list-item routerLink="/main"  (click)="cl()" >
+      <mat-icon>grid_view</mat-icon>
+      <span>Főoldal</span>
+  </a>
+
+    <a mat-list-item routerLink="/aboutus" (click)="cl()" >
+    <mat-icon>info</mat-icon>
+    <span>Rólunk</span>
+  </a>
+
+<a mat-list-item routerLink="/services"(click)="cl()" >
+  <mat-icon>info</mat-icon>
+  <span>Szolgáltatások</span>
+</a>
+
+<a mat-list-item routerLink="/worker" (click)="cl()" >
+  <mat-icon>info</mat-icon>
+  <span>Masszőreink</span>
+</a>
+
+<a mat-list-item routerLink="/prices" (click)="cl()" >
+  <mat-icon>info</mat-icon>
+  <span>Áraink</span>
+</a>
+
+<a mat-list-item routerLink="/book" (click)="cl()" >
+      <mat-icon>collections</mat-icon>
+      <span>Foglalás</span>
+  </a>
+
+  <a mat-list-item routerLink="/signup" (click)="cl()"*ngIf="!loggedInUser" >
+    <mat-icon>app_registration</mat-icon>
+    <span>Regisztráció</span>
+  </a>
+  <a mat-list-item routerLink="/login" (click)="cl()" *ngIf="!loggedInUser">
+    <mat-icon>login</mat-icon>
+    <span>Belépés</span>
+  </a>
+    <a mat-list-item routerLink="/login" (click)="cl()" *ngIf="loggedInUser">
+      <mat-icon>logout</mat-icon>
+      <span>Kilépés</span>
+    </a>
+
+
+</mat-nav-list>
+
+
+
+
+    
+
+
